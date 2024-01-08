@@ -445,7 +445,7 @@ li {
   <p>กรุณาเลือกตำแหน่งที่ต้องการให้หุ่นยนต์เดินทางรับหรือส่งเอกสาร</p>
 <div class="flex-test">
   <!-- <a href="#" onclick="sendLineNotify()" class="flex-item item-1">Target A</a> -->
-  <a href="#" onclick="showMessageBox()" class="flex-item item-1">Target A</a>
+  <a href="#" onclick="sendLineNotify()" class="flex-item item-1">Target A</a>
   <a href="#" class="flex-item item-2">Target B</a>
   <a href="#" class="flex-item item-3">Target C</a>
   <a href="#" class="flex-item item-4">Target D</a>
@@ -468,34 +468,34 @@ li {
 }
 
 
-    function showMessageBox() {
-        // ดึงตัวแสดงข้อความด้วย ID ของ div
-        // กำหนดข้อความที่ต้องการแสดง
-        var message = "Hello, this is a message!";
-        // แสดงข้อความในตัวแสดงข้อความ
-        console.log(message);
-    }
+    // function showMessageBox() {
+    //     // ดึงตัวแสดงข้อความด้วย ID ของ div
+    //     // กำหนดข้อความที่ต้องการแสดง
+    //     var message = "Hello, this is a message!";
+    //     // แสดงข้อความในตัวแสดงข้อความ
+    //     console.log(message);
+    // }
 //request location
-    // function sendLineNotify() {
-    //         var accessToken = "ClzyaFDd6Yqr9z3JN6kk2vBPXXn966rO2nBM2zzyScm";  // แทนที่ YOUR_ACCESS_TOKEN ด้วย Access Token ที่ได้จาก Line Notify
+    function sendLineNotify() {
+            var accessToken = 'ClzyaFDd6Yqr9z3JN6kk2vBPXXn966rO2nBM2zzyScm';  // แทนที่ YOUR_ACCESS_TOKEN ด้วย Access Token ที่ได้จาก Line Notify
 
-    //         var message = "Target A";
+            var message = "Target A";
 
-    //         var xhr = new XMLHttpRequest();
-    //         var url = "https://notify-api.line.me/api/notify";
-    //         xhr.open("POST", url, true);
-    //         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    //         xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+            var xhr = new XMLHttpRequest();
+            var url = "https://notify-api.line.me/api/notify";
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
 
-    //         xhr.onreadystatechange = function () {
-    //             if (xhr.readyState == 4 && xhr.status == 200) {
-    //                 // การทำงานเมื่อรับ response จาก Line Notify API
-    //                 console.log(xhr.responseText);
-    //             }
-    //         }
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // การทำงานเมื่อรับ response จาก Line Notify API
+                    console.log(xhr.responseText);
+                }
+            }
 
-    //         var params = "message=" + encodeURIComponent(message);
-    //         xhr.send(params);
-    //     }
+            var params = "message=" + encodeURIComponent(message);
+            xhr.send(params);
+        }
 </script>
 </html>
