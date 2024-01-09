@@ -43,7 +43,7 @@ window.signup = function (e) {
 
   createUserWithEmailAndPassword(auth, obj.email, obj.password)
   .then(function (success) {
-      window.location.replace('/HTML/login.html')
+      window.location.replace('login.html')
       // console.log(success.user.uid)
       alert("signup successfully")
     })
