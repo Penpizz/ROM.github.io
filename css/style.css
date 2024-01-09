@@ -7,7 +7,7 @@ body{
     background: #dfe9f5;
     width: 100%;
     height: 100vh;
-    background: url('AI-GIANT-ROBOT-1102023.png') no-repeat;
+    background: url('/img/AI-GIANT-ROBOT-1102023.png') no-repeat;
     background-size: cover;
     background-position: center ;
     /* filter: blur(12px); */
@@ -15,7 +15,7 @@ body{
 .background {
     width: 100%;
     height: 100vh;
-    background: url('AI-GIANT-ROBOT-1102023.png') no-repeat;
+    background: url('/img/AI-GIANT-ROBOT-1102023.png') no-repeat;
     background-size: cover;
     background-position: center ;
     filter: blur(12px);
